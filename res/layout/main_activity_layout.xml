@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:background="@android:color/darker_gray">
+
+    <!--引入topbar-->
+    <include
+            android:id="@+id/topbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/top_bar_layout"/>
+
+    <ListView
+            android:id="@+id/survey_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/topbar_layout"
+            android:layout_above="@+id/bottom_btn_layout"
+            android:padding="10dip"
+            android:cacheColorHint="@color/transparent"/>
+
+
+    <LinearLayout
+            android:id="@+id/bottom_btn_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dip"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+        <TextView
+                android:id="@+id/waiting_survey_txt"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:text="待查勘"
+                android:textSize="@dimen/bottom_btn_txt"
+                android:textColor="@color/black"
+                android:background="@color/bottome_btn_selected"
+                android:gravity="center"
+                android:layout_weight="1"/>
+
+        <TextView
+                android:id="@+id/surveying_txt"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:text="查勘中"
+                android:textSize="@dimen/bottom_btn_txt"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:background="@color/gray"/>
+
+        <TextView
+                android:id="@+id/surveyed_txt"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:text="已查勘"
+                android:textSize="@dimen/bottom_btn_txt"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:background="@color/gray"/>
+
+
+            </LinearLayout>
+
+</RelativeLayout>
+
